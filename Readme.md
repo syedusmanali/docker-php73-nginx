@@ -3,7 +3,7 @@
 ## Running the container from docker-composer.yml
 To run your PHP codebase simply download this repo in your codebase folder
 ```
-cd [basepath]/dockerphp7.3ngnix
+cd [basepath]/dockerphp7.3nginx
 docker-compose up
 ```
 #### Code Binding
