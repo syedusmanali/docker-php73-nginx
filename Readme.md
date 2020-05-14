@@ -15,11 +15,11 @@ docker-compose up
 - Mysql database can be accessed by the MySQL container name as the host name at port 3306
 - To modify the nginx configuration during run time adjust the nginx/nginx.conf file
 
-## Creating and running container image php7.3ngnix from dockerfile
-This image only contains php 7.3 and ngnix
+## Creating and running container image php7.3nginx from dockerfile
+This image only contains php 7.3 and nginx
 #### Creating image
 ```
-cd [basepath]/dockerphp7.3ngnix/dockerfile
+cd [basepath]/dockerphp7.3nginx/dockerfile
 docker build -t myimagename .
 ```
 #### Adjusting php and nginx configurations during build time
