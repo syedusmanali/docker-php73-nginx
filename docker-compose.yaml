@@ -13,7 +13,7 @@ services:
     networks:
         - mycustomnetwork
     volumes:
-        - ../../wordpress:/var/www/codebase
+        - ../:/var/www/codebase
         - ${PWD}/nginx/nginx.conf:/etc/nginx/sites-available/nginx.conf
     depends_on:
         - mysql
