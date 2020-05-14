@@ -1,0 +1,40 @@
+version: '3'
+services:
+  phpnginx:
+    build: dockerfile/.
+    image: syedusmanali/php7.3nginx
+    restart: always
+    expose:
+        - 80
+        #- 443
+    ports:
+        - 80:80
+       #- 443:443
+    networks:
+        - mycustomnetwork
+    volumes:
+        - ../../wordpress:/var/www/codebase
+        - ${PWD}/nginx/nginx.conf:/etc/nginx/sites-available/nginx.conf
+    depends_on:
+        - mysql
+  mysql:
+      image: mysql:5.7
+      restart: always
+      expose:
+          - 3306
+      ports:
+          - 3306:3306
+      volumes:
+          - database_data:/var/lib/mysql
+      networks:
+          - mycustomnetwork
+      environment:
+          MYSQL_ROOT_PASSWORD: rootpassword
+          MYSQL_DATABASE: mydatabase
+          MYSQL_USER: siteusername
+          MYSQL_PASSWORD: sitepassword
+volumes:
+    database_data:
+        driver: local
+networks:
+    mycustomnetwork: ~
