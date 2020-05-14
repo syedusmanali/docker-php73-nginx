@@ -1,6 +1,6 @@
 # Docker PHP 7.3 with Nginx and MySQL 5.7
 
-## Running the container from docker-composer.yml
+## Running the container from docker-compose.yaml
 To run your PHP codebase simply download this repo in your codebase folder
 by 
 ```
